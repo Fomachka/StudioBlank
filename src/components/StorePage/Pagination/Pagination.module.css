@@ -1,0 +1,19 @@
+.pagination {
+  display: flex;
+  margin: 40px auto;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pagination li {
+  list-style-type: none;
+}
+
+.page a {
+  text-decoration: none;
+  outline: none;
+  color: var(--color-primary);
+}
+.page a:active {
+  color: blue;
+}

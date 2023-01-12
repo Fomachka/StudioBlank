@@ -1,0 +1,145 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 0 30px;
+  gap: 13px;
+}
+
+.navigation__links {
+  display: none;
+}
+
+.navigation__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__cart {
+  display: flex;
+  border: var(--border-main);
+  align-items: center;
+  border-radius: 25px;
+  padding: 5px 13px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  font-size: 12px;
+  gap: 15px;
+}
+
+.navigation__cart img {
+  width: 15px;
+  height: auto;
+  cursor: pointer;
+}
+
+.navigation__cart p {
+  cursor: pointer;
+}
+
+.navbar__logo {
+  text-decoration: none;
+  outline: none;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.navbar__logo span {
+  font-weight: 200;
+  letter-spacing: -1.5px;
+}
+
+.navbar__logo:hover,
+.navbar__logo:active,
+.navbar__logo:visited {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-logo);
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 60px 60px 0 60px;
+    gap: 25px;
+  }
+  .navbar__logo {
+    font-size: 28px;
+  }
+
+  .navigation__cart {
+    font-size: 16px;
+    padding: 7px 20px;
+    gap: 40px;
+  }
+  .navigation__cart img {
+    width: 19px;
+    height: auto;
+  }
+  .navigation__menu img {
+    width: 48px;
+    height: 48px;
+    margin-left: -5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navigation__cart {
+    font-size: 18px;
+    padding: 9px 22px;
+  }
+
+  .navigation__cart img {
+    width: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .navigation__links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    font-size: 1.3rem;
+    margin-left: -150px;
+  }
+  .navigation__links a {
+    cursor: pointer;
+  }
+
+  .navigation__menu {
+    display: none;
+  }
+
+  .navigation__cart {
+    font-size: 1.2rem;
+    padding: 10px 26px;
+  }
+
+  .navigation__cart img {
+    width: 22px;
+    height: auto;
+  }
+  .navbar__logo {
+    font-size: 29px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .navigation__links {
+    font-size: 1.5rem;
+  }
+  .navbar__logo {
+    font-size: 32px;
+  }
+  .navigation__cart {
+    font-size: 1.5rem;
+  }
+  .navigation__cart img {
+    width: 24px;
+    height: auto;
+  }
+  .navigation__cart {
+    padding: 10px 30px;
+  }
+}

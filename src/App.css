@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap");
+
+@font-face {
+  font-family: "TTNorms";
+  src: local("TTNorms"), url("./fonts/TTNorms-Regular.otf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "TTNorms";
+  src: local("TTNorms"), url("./fonts/TTNorms-Bold.otf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "TTNorms";
+  src: local("TTNorms"), url("./fonts/TTNorms-Light.otf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "TTNorms";
+  src: local("TTNorms"), url("./fonts/TTNorms-Medium.otf") format("truetype");
+  font-weight: 500;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --color-bg: #eee9e3;
+  --color-primary: #524d4b;
+  --border-main: 1px solid var(--color-primary);
+  --color-white: #eee9e3;
+
+  --color-logo: #363636;
+
+  --font-main: "Oranienbaum", serif;
+  --font-secondary: "TTNorms", serif;
+  font-variant-ligatures: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  box-sizing: border-box;
+  font-family: var(--font-secondary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+  text-decoration: none;
+  outline: none;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover,
+a:active,
+a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }

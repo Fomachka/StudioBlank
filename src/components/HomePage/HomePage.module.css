@@ -1,0 +1,217 @@
+.homepage {
+  padding: 30px;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.homepage__top h1 {
+  font-family: var(--font-main);
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.homepage__top p {
+  font-family: var(--font-secondary);
+  font-size: 12px;
+  font-weight: normal;
+  max-width: 200px;
+  margin: 15px auto 30px auto;
+}
+
+.homepage__images {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.homepage__img {
+  height: 120px;
+  overflow: hidden;
+  background-size: cover;
+  border: var(--border-main);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.homepage__imageDiv {
+  display: flex;
+  flex-direction: column;
+  order: 3;
+  width: 100%;
+}
+
+.homepage__img1 {
+  background-image: url("../../assets/images/womanImage.png");
+  background-position: 0% 15%;
+}
+.homepage__img2 {
+  background-image: url("../../assets/images/serumsImage.png");
+  background-position: 0% 50%;
+}
+.homepage__img3 {
+  background-image: url("../../assets/images/applyImage.png");
+  background-position: 0% 55%;
+}
+
+.homepage__btn {
+  margin: 40px auto 0 auto;
+  width: 100%;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  padding: 15px 0;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .homepage {
+    padding: 60px 64px 60px 64px;
+  }
+  .homepage__top {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto 60px auto;
+    gap: calc(40px + 0.5vmax);
+  }
+  .homepage__top h1 {
+    font-size: 15vw;
+  }
+  .homepage__top p {
+    font-size: calc(0.9rem + 0.2vw);
+    max-width: 190px;
+    text-align: left;
+    line-height: 1.5;
+    margin: auto 0;
+    padding-top: 12px;
+  }
+
+  .homepage__images {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .homepage__img {
+    min-height: 240px;
+    width: calc(50% - 20px);
+  }
+
+  .homepage__img3 {
+    margin: 0 auto;
+  }
+
+  .homepage__btn {
+    max-width: 60vw;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .homepage__top {
+    max-width: calc(100% - 12vw);
+    gap: calc(50px + 1vw);
+  }
+  .homepage__top h1 {
+    font-size: 14vw;
+  }
+  .homepage__top p {
+    font-size: calc(1rem + 0.1vw);
+    min-width: 245px;
+    line-height: 1.6;
+  }
+
+  .homepage__images {
+    gap: 50px;
+  }
+  .homepage__img {
+    min-height: 280px;
+    width: calc(50% - 30px);
+  }
+
+  .homepage__btn {
+    margin: 50px auto 0 auto;
+    max-width: 60vw;
+  }
+  .homepage__img1 {
+    background-position: top;
+  }
+  .homepage__img2 {
+    background-position: 0 100%;
+  }
+  .homepage__img3 {
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .homepage__top h1 {
+    font-size: 190px;
+  }
+  .homepage__images {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+  .homepage__img {
+    width: 100%;
+    min-height: 300px;
+  }
+  .homepage__top {
+    margin: 50px auto 80px 11vw;
+    gap: 65px;
+    max-width: calc(100% - 20vw);
+  }
+  .homepage__top p {
+    font-size: calc(1rem + 0.3vw);
+    min-width: 285px;
+    line-height: 1.7;
+    padding-top: 25px;
+  }
+
+  .homepage__btn {
+    max-width: 100%;
+    font-size: 18px;
+  }
+  .homepage__imageDiv {
+    margin: 0;
+    flex-direction: column-reverse;
+  }
+
+  .homepage__img2 {
+    order: 3;
+  }
+
+  .homepage__btn {
+    margin: 0 auto 40px auto;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .homepage__top {
+    gap: 80px;
+    max-width: calc(100% - 30vw);
+    margin: 50px auto 80px 16vw;
+  }
+  .homepage__top p {
+    font-size: calc(1.3rem + 0.2vw);
+    min-width: 305px;
+    padding-top: 35px;
+  }
+  .homepage__top h1 {
+    font-size: 220px;
+  }
+  .homepage__img {
+    width: 100%;
+    min-height: 350px;
+  }
+}

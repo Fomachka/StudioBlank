@@ -1,0 +1,146 @@
+.sidenav {
+  gap: 13px;
+}
+
+.sidenav__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidenav__cart {
+  display: flex;
+  border: var(--border-main);
+  align-items: center;
+  border-radius: 25px;
+  padding: 5px 13px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  font-size: 12px;
+  gap: 15px;
+}
+
+.sidenav__cart img {
+  width: 15px;
+  height: auto;
+  cursor: pointer;
+}
+
+.sidenav__cart p {
+  cursor: pointer;
+}
+
+.sidenav__menu img {
+  width: 48px;
+  height: 48px;
+  margin-left: -5px;
+}
+
+.sidenav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 30px 30px 0px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav ul {
+  height: 100vh;
+  font-size: 2rem;
+  margin-left: clamp(1rem, 8vw, 48rem);
+  margin-top: clamp(1rem, 6vw, 8rem);
+}
+
+.sidenav ul:hover > li {
+  opacity: 0.3;
+}
+.sidenav ul:hover > li:hover {
+  opacity: 1;
+}
+
+.sidenav ul li {
+  padding: clamp(3rem, 8vw, 3.4rem) 0rem;
+}
+
+.sidenav ul li a {
+  font-size: 1.5rem;
+}
+
+.sidenav li,
+.sidenav a {
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  color: var(--color-primary);
+}
+
+.sidenav__logo {
+  text-decoration: none;
+  outline: none;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.sidenav__logo span {
+  font-weight: 200;
+  letter-spacing: -1.5px;
+}
+
+.sidenav__logo:hover,
+.sidenav__logo:active,
+.sidenav__logo:visited {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-logo);
+}
+
+.sidenav__icon {
+  width: 26px;
+  height: 26px;
+  margin-top: 9px;
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .sidenav ul li a {
+    font-size: 1.7rem;
+  }
+
+  .sidenav {
+    padding: 60px 60px 0 60px;
+    gap: 25px;
+  }
+  .sidenav__logo {
+    font-size: 28px;
+  }
+
+  .sidenav__cart {
+    font-size: 16px;
+    padding: 7px 20px;
+    gap: 40px;
+  }
+  .sidenav__cart img {
+    width: 19px;
+    height: auto;
+  }
+  .sidenav__icon {
+    width: 48px;
+    height: 48px;
+    margin-top: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidenav__cart {
+    font-size: 18px;
+    padding: 9px 22px;
+  }
+
+  .sidenav__cart img {
+    width: 20px;
+  }
+}
