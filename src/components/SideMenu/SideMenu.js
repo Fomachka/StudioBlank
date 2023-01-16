@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./SideMenu.module.css";
 import { menuCloseIcon, cartIcon } from "../../assets/";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SideMenu = ({ setToggleMenu }) => {
   const setToggle = () => {

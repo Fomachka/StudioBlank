@@ -1,5 +1,6 @@
 .storepage {
   padding: 30px 30px 0 30px;
+  margin: 0 auto;
 }
 
 .storepage > img {
@@ -13,6 +14,14 @@
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
   border: var(--border-main);
+  transition: object-position 1.5s ease-out;
+  -webkit-transition: object-position 1.5s ease-out;
+  -moz-transition: object-position 1.5s ease-out;
+  -ms-transition: object-position 1.5s ease-out;
+  -o-transition: object-position 1.5s ease-out;
+}
+.storepage > img:hover {
+  object-position: 0% 20%;
 }
 .storepage__filter {
   display: flex;
@@ -34,7 +43,6 @@
   display: grid;
   gap: 30px;
   text-align: center;
-  margin: 0 auto;
   justify-content: center;
 }
 
@@ -47,6 +55,7 @@
 .storepage__product p {
   color: var(--color-primary);
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .storepage__image {
@@ -61,11 +70,24 @@
   border: var(--border-main);
 }
 
+.storepage__image:hover {
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 .storepage__image > img {
-  margin: 25px 0;
+  margin: 25px auto;
   width: 34px;
   height: auto;
   background-color: #cbdbe7;
+}
+
+.storepage__cream > img {
+  width: 45px;
 }
 
 .storepage__price {
@@ -106,8 +128,17 @@
     height: 110px;
     object-position: 0% 15%;
   }
+
   .storepage__section {
     grid-template-columns: repeat(3, 170px);
+    gap: 40px;
+  }
+  .storepage__filter {
+    margin: 40px 5px;
+  }
+
+  .storepage__product {
+    gap: 13px;
   }
 
   .storepage__image {
@@ -117,6 +148,9 @@
   .storepage__image > img {
     width: 38px;
     margin: 30px auto;
+  }
+  .storepage__cream > img {
+    width: 50px;
   }
 
   .storepage__filter p:first-of-type {
@@ -141,12 +175,117 @@
   .storepage {
     padding: 30px 60px 0 60px;
   }
+  .storepage__filter {
+    gap: 25px;
+    margin: 50px 5px;
+  }
   .storepage > img {
-    height: 110px;
+    height: 140px;
     object-position: 0% 15%;
   }
+  .storepage__image {
+    width: 250px;
+    height: 250px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+  }
+  .storepage__product {
+    gap: 18px;
+  }
+  .storepage__section {
+    grid-template-columns: repeat(3, 250px);
+    gap: 50px;
+  }
   .storepage__image > img {
-    width: 40px;
-    margin: 26px auto;
+    width: 57px;
+    margin: 42px auto;
+  }
+  .storepage__cream > img {
+    width: 75px;
+  }
+  .storepage__price {
+    gap: 15px;
+  }
+  .storepage__filter p:first-of-type {
+    font-size: 1rem;
+  }
+  .storepage__filter p:nth-of-type(2) {
+    font-size: 1.125rem;
+  }
+  .storepage__product p {
+    font-size: 1.125rem;
+  }
+  .storepage__price p:first-of-type {
+    font-size: 1.25rem;
+  }
+  .storepage__price p:nth-of-type(2) {
+    font-size: 0.938rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .storepage {
+    padding: 90px 120px 0 120px;
+    max-width: 1600px;
+  }
+  .storepage__filter {
+    gap: 40px;
+    margin: 65px 5px;
+  }
+  .storepage > img {
+    height: 180px;
+    object-position: 0% 15%;
+  }
+  .storepage__image {
+    width: 350px;
+    height: 350px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+  }
+  .storepage__section {
+    grid-template-columns: repeat(3, 350px);
+  }
+  .storepage__image > img {
+    width: 80px;
+    margin: 55px auto;
+  }
+  .storepage__cream > img {
+    width: 110px;
+  }
+  .storepage__product {
+    gap: 25px;
+  }
+
+  .storepage__filter p:first-of-type {
+    font-size: 1.25rem;
+  }
+  .storepage__filter p:nth-of-type(2) {
+    font-size: 1.375rem;
+  }
+  .storepage__product p {
+    font-size: 1.375rem;
+  }
+  .storepage__price p:first-of-type {
+    font-size: 1.5rem;
+  }
+  .storepage__price p:nth-of-type(2) {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .storepage {
+    padding-top: 110px;
+    max-width: 1600px;
+  }
+  .storepage > img {
+    height: 200px;
+    object-position: 0% 15%;
   }
 }

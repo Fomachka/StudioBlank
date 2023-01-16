@@ -8,11 +8,9 @@ import womanImage from "./images/womanImage.png";
 import serumsImage from "./images/serumsImage.png";
 import applyImage from "./images/applyImage.png";
 import applyImage2 from "./images/applyImage2.png";
-import product from "./images/product.png";
 import product2 from "./images/product2.png";
 
 export {
-  product,
   product2,
   cartIcon,
   menuIcon,

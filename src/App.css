@@ -24,7 +24,7 @@
 :root {
   --color-bg: #eee9e3;
   --color-primary: #524d4b;
-  --border-main: 1px solid var(--color-primary);
+  --border-main: 1px solid rgb(120, 120, 120);
   --color-white: #eee9e3;
 
   --color-logo: #363636;

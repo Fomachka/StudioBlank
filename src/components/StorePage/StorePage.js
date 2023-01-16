@@ -3,19 +3,33 @@ import { applyImage2 } from "../../assets";
 import SingleProduct from "./SingleProduct";
 import styles from "./StorePage.module.css";
 import Pagination from "./Pagination/Pagination";
+import axios from "axios";
 
 const StorePage = () => {
   const [products, setProducts] = useState([]); // info about all products
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(2);
+  const [productsPerPage] = useState(6);
 
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = products.slice(indexOfFirstPost, indexOfLastPost);
+  const indexOfLastPost = currentPage * productsPerPage;
+  const indexOfFirstPost = indexOfLastPost - productsPerPage;
+  const currentProducts = products.slice(indexOfFirstPost, indexOfLastPost);
 
-  const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(process.env.REACT_APP_API_URL + "/products?populate=*", {
+          headers: {
+            Authorization: "bearer" + process.env.REACT_APP_API_TOKEN,
+          },
+        });
+        setProducts(response.data.data);
+        console.log(response.data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <main className={styles.storepage}>
@@ -25,13 +39,16 @@ const StorePage = () => {
         <p>All Products</p>
       </div>
       <section className={styles.storepage__section}>
-        <SingleProduct posts={currentPosts} />
-        <SingleProduct />
-        <SingleProduct />
-        <SingleProduct />
-        <SingleProduct />
+        {currentProducts.map((product) => (
+          <SingleProduct key={product.id} productInfo={product} />
+        ))}
       </section>
-      <Pagination postsPerPage={postsPerPage} totalPosts={5} paginate={paginate} />
+      <Pagination
+        productsPerPage={productsPerPage}
+        totalProducts={products.length}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
     </main>
   );
 };
