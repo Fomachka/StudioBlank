@@ -1,0 +1,214 @@
+.about {
+  padding: 30px 30px 0 30px;
+}
+.about__section {
+  position: relative;
+  margin: 0 auto;
+}
+
+.about__bgimage {
+  width: 100%;
+  min-height: 600px;
+  object-fit: cover;
+  border: var(--border-main);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.about__onimage {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  color: var(--color-primary);
+  background: none;
+  width: 100%;
+  padding: 35px 25px;
+  height: 100%;
+}
+
+.about__onimage h1 {
+  font-family: var(--font-main);
+  font-size: 53px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  background: none;
+  text-align: center;
+}
+
+.about__onimage p {
+  background: none;
+  text-align: right;
+  float: right;
+  line-height: 1.5;
+}
+
+.about__images {
+  position: absolute;
+  margin-top: 30px;
+  background: none;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.about__images img {
+  width: 160px;
+  height: auto;
+  background: none;
+  position: absolute;
+}
+
+.about__serumimage {
+  bottom: -50px;
+}
+.about__creamimage {
+  top: 35%;
+  right: 20px;
+  width: 170px !important;
+  height: auto;
+}
+
+@media screen and (min-width: 375px) {
+  .about__section h1 {
+    white-space: nowrap;
+    font-size: 68px;
+  }
+  .about__creamimage {
+    top: 35%;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .about__section h1 {
+    white-space: nowrap;
+    font-size: 19vw;
+  }
+  .about__onimage p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    max-width: 280px;
+  }
+  .about__creamimage {
+    top: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    padding: 30px 60px 0 60px;
+  }
+
+  .about__bgimage {
+    min-height: 70vh;
+  }
+  .about__onimage {
+    padding: 50px 60px;
+  }
+
+  .about__onimage h1 {
+    font-size: 16vw;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  .about__onimage p {
+    font-size: 26px;
+    max-width: 400px;
+  }
+  .about__images img {
+    width: 180px;
+    height: auto;
+    background: none;
+    position: absolute;
+  }
+  .about__creamimage {
+    top: 50%;
+    right: 10%;
+    width: 220px !important;
+  }
+  .about__serumimage {
+    left: 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about__onimage {
+    padding: 50px 100px;
+  }
+  .about__bgimage {
+    max-height: 1000px;
+  }
+  .about__images img {
+    width: 280px;
+  }
+  .about__creamimage {
+    top: 45%;
+    width: 320px !important;
+  }
+  .about__serumimage {
+    left: 10%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about {
+    padding: 90px 120px 0 120px;
+  }
+  .about__onimage h1 {
+    text-align: right;
+    white-space: normal;
+    max-width: 600px;
+    margin: 0 0 50px auto;
+    font-size: 180px;
+  }
+
+  .about__bgimage {
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+  .about__images img {
+    width: 270px;
+  }
+  .about__creamimage {
+    top: -10%;
+    width: 340px !important;
+    left: 20%;
+  }
+  .about__serumimage {
+    left: 5%;
+  }
+  .about__bgimage {
+    min-height: 720px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .about__onimage h1 {
+    font-size: 220px;
+  }
+  .about__onimage p {
+    font-size: 32px;
+    min-width: 500px;
+  }
+  .about__bgimage {
+    min-height: 870px;
+  }
+  .about__images img {
+    width: 340px;
+  }
+  .about__creamimage {
+    top: -10%;
+    width: 400px !important;
+    left: 25%;
+  }
+  .about__serumimage {
+    left: 5%;
+  }
+}
