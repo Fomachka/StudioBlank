@@ -6,13 +6,7 @@
   align-items: center;
 }
 
-.pagination li {
-  list-style-type: none;
-}
-
 .page a {
-  text-decoration: none;
-  outline: none;
   color: var(--color-primary);
 }
 

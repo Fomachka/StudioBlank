@@ -27,6 +27,8 @@
   --border-main: 1px solid rgb(120, 120, 120);
   --color-white: #eee9e3;
 
+  --color-price: #626262;
+
   --color-logo: #363636;
 
   --font-main: "Oranienbaum", serif;
@@ -45,6 +47,7 @@
 a {
   text-decoration: none;
   outline: none;
+  background: transparent;
 }
 a:hover,
 a:active,
@@ -54,6 +57,10 @@ a:visited {
   color: inherit;
 }
 
+li {
+  list-style: none;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -61,5 +68,17 @@ a:visited {
 }
 
 main {
+  padding: 30px;
   flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    padding: 30px 60px 60px 60px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main {
+    padding: 90px 120px 60px 120px;
+  }
 }

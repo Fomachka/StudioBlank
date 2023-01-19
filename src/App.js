@@ -1,5 +1,13 @@
 import "./App.css";
-import { HomePage, Navbar, StorePage, AboutPage, ContactPage, CartPage } from "./components/index";
+import {
+  HomePage,
+  Navbar,
+  StorePage,
+  AboutPage,
+  ContactPage,
+  CartPage,
+  SingleProductPage,
+} from "./components/index";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const Layout = () => {
@@ -23,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/store",
         element: <StorePage />,
+      },
+      {
+        path: "/store/:id",
+        element: <SingleProductPage />,
       },
       {
         path: "/about",

@@ -3,6 +3,7 @@ import menuIcon from "./icons/menuIcon.svg";
 import menuCloseIcon from "./icons/menuCloseIcon.svg";
 import rightArrow from "./icons/rightArrow.svg";
 import leftArrow from "./icons/leftArrow.svg";
+import checkMark from "./icons/checkmarkIcon.svg";
 
 import womanImage from "./images/womanImage.png";
 import serumsImage from "./images/serumsImage.png";
@@ -27,6 +28,7 @@ export {
   applyImage2,
   rightArrow,
   leftArrow,
+  checkMark,
   aboutMeSmall,
   aboutMeMedium,
   aboutMeBig,

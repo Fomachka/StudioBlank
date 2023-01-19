@@ -1,5 +1,6 @@
 .sidenav {
   gap: 13px;
+  overflow: hidden;
 }
 
 .sidenav__top {
@@ -54,6 +55,7 @@
   font-size: 2rem;
   margin-left: clamp(1rem, 8vw, 48rem);
   margin-top: clamp(1rem, 6vw, 8rem);
+  color: var(--color-primary);
 }
 
 .sidenav ul:hover > li {
@@ -69,14 +71,6 @@
 
 .sidenav ul li a {
   font-size: 1.5rem;
-}
-
-.sidenav li,
-.sidenav a {
-  list-style: none;
-  text-decoration: none;
-  outline: none;
-  color: var(--color-primary);
 }
 
 .sidenav__logo {
