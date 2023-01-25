@@ -134,6 +134,28 @@
   -o-border-radius: 25px;
   font-size: 14px;
 }
+.single__btn:hover {
+  background-color: var(--color-primary-dark);
+}
+.single__btn:active {
+  transform: scale(0.99);
+  -webkit-transform: scale(0.99);
+  -moz-transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  -o-transform: scale(0.99);
+}
+
+.single__toaster {
+  background: transparent;
+  top: 30px !important;
+}
+
+.single__toaster div {
+  background: transparent;
+}
+.single__toaster div div {
+  background: var(--color-bg);
+}
 
 @media screen and (min-width: 425px) {
   .single {

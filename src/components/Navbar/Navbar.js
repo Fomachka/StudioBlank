@@ -3,10 +3,24 @@ import styles from "./Navbar.module.css";
 import { cartIcon, menuIcon } from "../../assets/index";
 import SideMenu from "../SideMenu/SideMenu";
 import { Outlet, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const cart = useSelector((state) => state.cart);
 
+  const totalCartItems = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += item.quantity;
+    });
+
+    if (total > 99) {
+      return "99+";
+    }
+
+    return total;
+  };
   return (
     <header className={styles.header}>
       <nav className={styles.navigation__top}>
@@ -32,6 +46,7 @@ const Navbar = () => {
           <Link to="/cart" className={styles.navigation__icon}>
             <img src={cartIcon} alt="cart icon" />
           </Link>
+          <span className={styles.navigation__iconbubble}>{totalCartItems() || 0}</span>
         </nav>
       </nav>
       <nav className={styles.navigation__menu} onClick={() => setToggleMenu((prev) => !prev)}>

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SingleProductPage.module.css";
 import { useLocation } from "react-router-dom";
 import { checkMark } from "../../../assets/";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../redux/cartSlice";
+import toast, { Toaster } from "react-hot-toast";
 
 const SingleProductPage = () => {
   const location = useLocation();
+  const dispatch = useDispatch();
   const state = location.state;
   const {
     productName,
@@ -16,6 +20,38 @@ const SingleProductPage = () => {
     productSalePercent,
     productType,
   } = state.attributes;
+
+  const [currentQuantity, setCurrentQuantity] = useState(1);
+
+  const handleQuantity = (state) => {
+    if (state === "increase") {
+      setCurrentQuantity((prev) => prev + 1);
+    } else {
+      if (currentQuantity === 1) {
+        setCurrentQuantity(1);
+      } else if (currentQuantity > 1) {
+        setCurrentQuantity((prev) => prev - 1);
+      }
+    }
+  };
+
+  const handleCart = () => {
+    dispatch(
+      addToCart({
+        attributes: { ...state.attributes },
+        id: state.id,
+        quantity: currentQuantity,
+      })
+    );
+    toast(productName + " added to cart", {
+      style: {
+        border: `2px solid ${productColor}`,
+        borderRadius: "10px",
+      },
+      icon: "✅",
+    });
+    setCurrentQuantity(1);
+  };
   return (
     <main className={styles.single}>
       <h2>{productName}</h2>
@@ -54,12 +90,15 @@ const SingleProductPage = () => {
           </li>
         </ul>
         <div className={styles.single__amount}>
-          <button>-</button>
-          <p>1</p>
-          <button>+</button>
+          <button onClick={() => handleQuantity("decrease")}>-</button>
+          <p>{currentQuantity}</p>
+          <button onClick={() => handleQuantity("increase")}>+</button>
         </div>
-        <button className={styles.single__btn}>ADD TO CART</button>
+        <button className={styles.single__btn} onClick={handleCart}>
+          ADD TO CART
+        </button>
       </div>
+      <Toaster position="top-center" containerClassName={styles.single__toaster} gutter={24} />
     </main>
   );
 };
