@@ -1,7 +1,3 @@
-.storepage {
-  margin: 0 auto;
-}
-
 .storepage > img {
   width: 100%;
   height: 90px;
@@ -274,6 +270,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .storepage {
+    margin: 0 auto;
+  }
+
   .storepage__filter {
     gap: 40px;
     margin: 65px 5px;

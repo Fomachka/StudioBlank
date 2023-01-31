@@ -72,6 +72,17 @@
   font-size: 14px;
 }
 
+.homepage__btn:hover {
+  background-color: var(--color-primary-dark);
+}
+.homepage__btn:active {
+  transform: scale(0.99);
+  -webkit-transform: scale(0.99);
+  -moz-transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  -o-transform: scale(0.99);
+}
+
 @media screen and (min-width: 768px) {
   .homepage {
     padding: 60px 64px 60px 64px;

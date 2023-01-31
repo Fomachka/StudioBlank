@@ -23,6 +23,7 @@
 
 :root {
   --color-bg: #eee9e3;
+  --color-bg-white: #ebebeb;
   --color-primary: #524d4b;
   --color-primary-dark: #413e3c;
   --border-main: 1px solid rgb(120, 120, 120);

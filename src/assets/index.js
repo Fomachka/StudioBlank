@@ -1,9 +1,12 @@
 import cartIcon from "./icons/cartIcon.svg";
+import cartpageIcon from "./icons/cartpageIcon.svg";
 import menuIcon from "./icons/menuIcon.svg";
 import menuCloseIcon from "./icons/menuCloseIcon.svg";
 import rightArrow from "./icons/rightArrow.svg";
 import leftArrow from "./icons/leftArrow.svg";
 import checkMark from "./icons/checkmarkIcon.svg";
+import warningIcon from "./icons/warningIcon.svg";
+import deleteIcon from "./icons/deleteIcon.svg";
 
 import womanImage from "./images/womanImage.png";
 import serumsImage from "./images/serumsImage.png";
@@ -20,6 +23,7 @@ import aboutMeCream from "./images/AboutMe-cream.png";
 export {
   product2,
   cartIcon,
+  cartpageIcon,
   menuIcon,
   womanImage,
   serumsImage,
@@ -29,6 +33,8 @@ export {
   rightArrow,
   leftArrow,
   checkMark,
+  warningIcon,
+  deleteIcon,
   aboutMeSmall,
   aboutMeMedium,
   aboutMeBig,

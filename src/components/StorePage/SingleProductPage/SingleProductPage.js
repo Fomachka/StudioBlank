@@ -3,7 +3,7 @@ import styles from "./SingleProductPage.module.css";
 import { useLocation } from "react-router-dom";
 import { checkMark } from "../../../assets/";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../redux/cartSlice";
+import { addToCart, incrementCart, decrementCart } from "../../../redux/cartSlice";
 import toast, { Toaster } from "react-hot-toast";
 
 const SingleProductPage = () => {
@@ -52,6 +52,7 @@ const SingleProductPage = () => {
     });
     setCurrentQuantity(1);
   };
+
   return (
     <main className={styles.single}>
       <h2>{productName}</h2>
@@ -60,11 +61,11 @@ const SingleProductPage = () => {
         style={productColor && { backgroundColor: productColor }}
       >
         <img
-          className={styles.single__image}
+          className={`${styles.single__image} ${productType === "cream" && styles.single__cream}`}
           src={process.env.REACT_APP_URL + productImage.data.attributes.url}
           alt={productName}
         />
-        <p>150ml</p>
+        <p>{productType === "cream" ? "200ml" : "150ml"}</p>
       </div>
       <div className={styles.single__info}>
         <h2 className={styles.single__infoh2}>{productName}</h2>

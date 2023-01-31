@@ -28,7 +28,7 @@
 .single__image {
   position: absolute;
   background: transparent;
-  width: 70px;
+  width: 75px;
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
@@ -37,6 +37,11 @@
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   margin-bottom: 10px;
+}
+
+.single__cream {
+  width: 95px !important;
+  bottom: 17%;
 }
 .single__imagecontainer > p {
   position: absolute;
@@ -174,7 +179,10 @@
   }
   .single__image {
     bottom: 20%;
-    width: 75px;
+  }
+
+  .single__cream {
+    width: 100px !important;
   }
   .single__infoprice {
     margin-bottom: 32px;
@@ -228,6 +236,9 @@
   .single__image {
     width: 90px;
   }
+  .single__cream {
+    width: 125px !important;
+  }
   .single__infoprice {
     margin-bottom: 40px;
   }
@@ -275,6 +286,9 @@
   }
   .single__image {
     width: 100px;
+  }
+  .single__cream {
+    width: 135px !important;
   }
   .single__infoprice {
     margin-bottom: 45px;
@@ -352,6 +366,10 @@
   .single__image {
     width: 200px;
     bottom: 15%;
+  }
+
+  .single__cream {
+    width: 260px !important;
   }
   .single__benefits {
     gap: 55px;

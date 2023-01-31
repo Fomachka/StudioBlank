@@ -32,7 +32,7 @@ const SideMenu = ({ setToggleMenu }) => {
         </Link>
         <div className={styles.sidenav__cart}>
           <p>Hi, Fomachka</p>
-          <Link to="/cart">
+          <Link to="/cart" onClick={setToggle}>
             <img src={cartIcon} alt="cart icon" />
             <span className={styles.sidenav__iconbubble}>{totalCartItems() || 0}</span>
           </Link>
