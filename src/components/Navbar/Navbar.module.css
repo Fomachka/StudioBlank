@@ -27,7 +27,7 @@
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
   font-size: 12px;
-  gap: 15px;
+  gap: 10px;
 }
 
 .navigation__cart img {
@@ -154,6 +154,13 @@
   .navigation__cart img {
     width: 22px;
     height: auto;
+  }
+  .navigation__cart:hover {
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
   }
   .navbar__logo {
     font-size: 29px;

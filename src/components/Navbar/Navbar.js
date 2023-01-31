@@ -41,12 +41,14 @@ const Navbar = () => {
             <Link to="/contact">Contact Us</Link>
           </li>
         </ul>
-        <nav className={styles.navigation__cart}>
-          <p>Hi, Fomachka</p>
+        <nav>
           <Link to="/cart" className={styles.navigation__icon}>
-            <img src={cartIcon} alt="cart icon" />
+            <div className={styles.navigation__cart}>
+              <p>My Cart</p>
+              <img src={cartIcon} alt="cart icon" />
+              <span className={styles.navigation__iconbubble}>{totalCartItems() || 0}</span>
+            </div>
           </Link>
-          <span className={styles.navigation__iconbubble}>{totalCartItems() || 0}</span>
         </nav>
       </nav>
       <nav className={styles.navigation__menu} onClick={() => setToggleMenu((prev) => !prev)}>

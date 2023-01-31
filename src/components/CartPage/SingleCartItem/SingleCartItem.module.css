@@ -15,6 +15,15 @@
   -o-border-radius: 15px;
 }
 
+.cartpage__imagediv:hover {
+  transform: scale(1.005);
+  -webkit-transform: scale(1.005);
+  -moz-transform: scale(1.005);
+  -ms-transform: scale(1.005);
+  -o-transform: scale(1.005);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 .cartpage__imagediv > img {
   position: absolute;
   height: auto;
@@ -102,6 +111,11 @@
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
+}
+
+.single__amount button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
 }
 
 @media screen and (min-width: 425px) {

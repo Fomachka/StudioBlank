@@ -241,12 +241,16 @@
     display: none;
   }
 
-  .cartpage__none {
-    max-width: 1100px;
+  .cartpage__empty > img {
+    width: 50px;
   }
 
-  .cartpage__empty {
-    font-size: 22px;
+  .cartpage__empty > p {
+    font-size: 24px;
+  }
+
+  .cartpage__none {
+    max-width: 1100px !important;
   }
 
   .cartpage__amount2 {
@@ -288,6 +292,10 @@
 }
 
 @media screen and (min-width: 1920px) {
+  .cartpage {
+    max-width: 1800px;
+  }
+
   .cartpage__amount > p {
     font-size: 22px;
     white-space: nowrap;
