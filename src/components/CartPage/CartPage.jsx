@@ -4,11 +4,30 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { cartpageIcon, menuCloseIcon, warningIcon } from "../../assets";
 import SingleCart from "./SingleCartItem/SingleCartItem";
+import axios from "axios";
+import { loadStripe } from "@stripe/stripe-js";
+import { makeRequest } from "../../util/makeRequest";
 
 const CartPage = () => {
   const cart = useSelector((state) => state.cart);
   const navigate = useNavigate();
-  console.log(cart);
+
+  const stripePromise = loadStripe(process.env.REACT_APP_PUB_KEY);
+
+  const handlePayment = async () => {
+    try {
+      const stripe = await stripePromise;
+      const res = await makeRequest.post("/orders", {
+        products: cart,
+      });
+
+      await stripe.redirectToCheckout({
+        sessionId: res.data.stripeSession.id,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const calculateTotal = () => {
     let total = 0;
@@ -66,13 +85,13 @@ const CartPage = () => {
                 </div>
               </div>
             </div>
-            <button className={styles.cartpage__btn} onClick={() => navigate("/")}>
+            <button className={styles.cartpage__btn} onClick={handlePayment}>
               PROCEED TO CHECKOUT
             </button>
           </div>
           <ul className={styles.cartpage__containers}>
             {" "}
-            {cart.map((item, index) => {
+            {cart?.map((item, index) => {
               return <SingleCart productInfo={item} key={index} />;
             })}
           </ul>
@@ -109,7 +128,7 @@ const CartPage = () => {
             BACK TO STORE
           </button>
         ) : (
-          <button className={styles.cartpage__btn} onClick={() => navigate("/")}>
+          <button className={styles.cartpage__btn} onClick={handlePayment}>
             PROCEED TO CHECKOUT
           </button>
         )}
