@@ -3,23 +3,14 @@ import styles from "./SingleProductPage.module.css";
 import { useLocation } from "react-router-dom";
 import { checkMark } from "../../../assets/";
 import { useDispatch } from "react-redux";
-import { addToCart, incrementCart, decrementCart } from "../../../redux/cartSlice";
+import { addToCart } from "../../../redux/cartSlice";
 import toast, { Toaster } from "react-hot-toast";
 
 const SingleProductPage = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const state = location.state;
-  const {
-    productName,
-    productOnSale,
-    productPrice,
-    productSalePrice,
-    productImage,
-    productColor,
-    productSalePercent,
-    productType,
-  } = state.attributes;
+  const { productName, productPrice, productImage, productColor, productType } = state.attributes;
 
   const [currentQuantity, setCurrentQuantity] = useState(1);
 

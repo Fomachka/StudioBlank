@@ -14,7 +14,6 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setForm((prev) => ({ ...prev, firstName: e.target.value }));
     setForm((prev) => ({
       ...prev,
       firstName: e.target.firstName.value,
@@ -36,7 +35,6 @@ const ContactPage = () => {
     if (isFormValid(form)) {
       navigate("/submitted");
     }
-    console.log("hey");
   }, [form, navigate]);
 
   return (

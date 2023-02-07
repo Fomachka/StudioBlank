@@ -2,9 +2,8 @@ import React from "react";
 import styles from "./CartPage.module.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { cartpageIcon, menuCloseIcon, warningIcon } from "../../assets";
+import { cartpageIcon, warningIcon } from "../../assets";
 import SingleCart from "./SingleCartItem/SingleCartItem";
-import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
 import { makeRequest } from "../../util/makeRequest";
 
