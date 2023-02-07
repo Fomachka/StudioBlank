@@ -13,6 +13,7 @@ import serumsImage from "./images/serumsImage.png";
 import applyImage from "./images/applyImage.png";
 import applyImage2 from "./images/applyImage2.png";
 import product2 from "./images/product2.png";
+import contactImage from "./images/contactImage.png";
 
 import aboutMeSmall from "./images/AboutMe-small.png";
 import aboutMeMedium from "./images/AboutMe-medium.png";
@@ -23,6 +24,7 @@ import aboutMeCream from "./images/AboutMe-cream.png";
 export {
   product2,
   cartIcon,
+  contactImage,
   cartpageIcon,
   menuIcon,
   womanImage,

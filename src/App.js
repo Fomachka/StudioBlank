@@ -7,6 +7,9 @@ import {
   ContactPage,
   CartPage,
   SingleProductPage,
+  ErrorPage,
+  SuccessPage,
+  SuccessForm,
 } from "./components/index";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -29,6 +32,10 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
+        path: "*",
+        element: <ErrorPage />,
+      },
+      {
         path: "/store",
         element: <StorePage />,
       },
@@ -47,6 +54,14 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <CartPage />,
+      },
+      {
+        path: "/success",
+        element: <SuccessPage />,
+      },
+      {
+        path: "/submitted",
+        element: <SuccessForm />,
       },
     ],
   },

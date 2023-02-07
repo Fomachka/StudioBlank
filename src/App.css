@@ -24,6 +24,7 @@
 :root {
   --color-bg: #eee9e3;
   --color-bg-white: #ebebeb;
+  --color-bg-grey: #e2e2e2;
   --color-primary: #524d4b;
   --color-primary-dark: #413e3c;
   --border-main: 1px solid rgb(120, 120, 120);
@@ -52,11 +53,12 @@ a {
   background: transparent;
 }
 a:hover,
+a:link,
 a:active,
 a:visited {
   cursor: pointer;
   text-decoration: none;
-  color: inherit;
+  color: var(--color-);
 }
 
 li {

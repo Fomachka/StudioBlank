@@ -25,7 +25,7 @@ const CartPage = () => {
         sessionId: res.data.stripeSession.id,
       });
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
   };
 
