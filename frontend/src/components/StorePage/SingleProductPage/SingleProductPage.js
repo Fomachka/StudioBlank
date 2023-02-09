@@ -53,7 +53,7 @@ const SingleProductPage = () => {
       >
         <img
           className={`${styles.single__image} ${productType === "cream" && styles.single__cream}`}
-          src={process.env.REACT_APP_URL + productImage.data.attributes.url}
+          src={productImage.data.attributes.url}
           alt={productName}
         />
         <p>{productType === "cream" ? "200ml" : "150ml"}</p>

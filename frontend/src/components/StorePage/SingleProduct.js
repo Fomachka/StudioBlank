@@ -13,6 +13,8 @@ const SingleProduct = ({ productInfo }) => {
     productSalePercent,
     productType,
   } = productInfo.attributes;
+
+  console.log(productInfo);
   return (
     <div className={styles.storepage__product}>
       <Link to={`/store/${productInfo.id}`} state={productInfo}>
@@ -23,7 +25,7 @@ const SingleProduct = ({ productInfo }) => {
           style={productColor && { backgroundColor: productColor }}
         >
           <img
-            src={process.env.REACT_APP_URL + productImage.data.attributes.url}
+            src={productImage.data.attributes.url}
             alt={productName}
             style={productColor && { backgroundColor: productColor }}
             className={styles.storepage__productimage}

@@ -18,7 +18,7 @@ const SingleCartItem = ({ productInfo }) => {
             className={`${
               productType === "cream" ? styles.cartpage__cream : styles.cartpage__serum
             }`}
-            src={process.env.REACT_APP_URL + image}
+            src={image}
             alt="bottle of a serum"
             style={{ backgroundColor: productColor }}
           />
