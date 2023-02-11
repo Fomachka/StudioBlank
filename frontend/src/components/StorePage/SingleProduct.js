@@ -14,7 +14,6 @@ const SingleProduct = ({ productInfo }) => {
     productType,
   } = productInfo.attributes;
 
-  console.log(productInfo);
   return (
     <div className={styles.storepage__product}>
       <Link to={`/store/${productInfo.id}`} state={productInfo}>
