@@ -18,8 +18,6 @@ const Navbar = () => {
     setActive(path);
   };
 
-  console.log(location.pathname);
-
   const cart = useSelector((state) => state.cart);
 
   const totalCartItems = () => {
