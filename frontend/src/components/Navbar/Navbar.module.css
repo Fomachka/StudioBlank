@@ -40,25 +40,6 @@
   cursor: pointer;
 }
 
-.navbar__logo {
-  text-decoration: none;
-  outline: none;
-  font-weight: bold;
-  letter-spacing: -1px;
-}
-
-.navbar__logo span {
-  font-weight: 200;
-  letter-spacing: -1.5px;
-}
-
-.navbar__logo:hover,
-.navbar__logo:active,
-.navbar__logo:visited {
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--color-logo);
-}
 .navigation__iconbubble {
   position: absolute;
   right: 0;
@@ -80,6 +61,35 @@
   -o-border-radius: 50%;
 }
 
+.navbar__logo {
+  text-decoration: none;
+  outline: none;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.navbar__logo span {
+  font-weight: 200;
+  letter-spacing: -1.5px;
+}
+
+.navbar__logo:hover,
+.navbar__logo:active,
+.navbar__logo:visited {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-logo);
+}
+
+.navigation__icon {
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.navigation__icon:hover {
+  background: var(--color-bg-grey);
+  border-radius: 5px;
+}
+
 @media screen and (min-width: 768px) {
   .header {
     padding: 60px 60px 0 60px;
@@ -89,6 +99,11 @@
     font-size: 28px;
   }
 
+  .navigation__menu img {
+    width: 48px;
+    height: 48px;
+    margin-left: -5px;
+  }
   .navigation__cart {
     font-size: 16px;
     padding: 7px 20px;
@@ -97,11 +112,6 @@
   .navigation__cart img {
     width: 19px;
     height: auto;
-  }
-  .navigation__menu img {
-    width: 48px;
-    height: 48px;
-    margin-left: -5px;
   }
   .navigation__iconbubble {
     right: 3px;
@@ -138,12 +148,30 @@
     font-size: 1.3rem;
     margin-left: -150px;
   }
+
+  .navigation__active {
+    text-decoration: underline !important;
+    text-decoration-color: var(--color-price) !important;
+    text-underline-offset: 8px;
+  }
+
+  .navigation__links a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary);
+    text-underline-offset: 8px;
+    color: var(--color-primary-dark);
+  }
+
   .navigation__links a {
     cursor: pointer;
   }
 
   .navigation__menu {
     display: none;
+  }
+
+  .navbar__logo {
+    font-size: 29px;
   }
 
   .navigation__cart {
@@ -162,9 +190,7 @@
     -ms-transform: scale(1.01);
     -o-transform: scale(1.01);
   }
-  .navbar__logo {
-    font-size: 29px;
-  }
+
   .navigation__iconbubble {
     top: -11px;
     right: 5px;

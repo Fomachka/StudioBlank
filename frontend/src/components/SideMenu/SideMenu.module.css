@@ -1,6 +1,16 @@
 .sidenav {
   gap: 13px;
   overflow: hidden;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100vw;
+  padding: 30px 30px 0px 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidenav__top {
@@ -9,63 +19,9 @@
   align-items: center;
 }
 
-.sidenav__cart {
-  display: flex;
-  position: relative;
-  border: var(--border-main);
-  align-items: center;
-  border-radius: 25px;
-  padding: 5px 13px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-  font-size: 12px;
-  gap: 15px;
-}
-
-.sidenav__cart img {
-  width: 15px;
-  height: auto;
-  cursor: pointer;
-}
-
-.sidenav__cart p {
-  cursor: pointer;
-}
-
-.sidenav {
-  position: absolute;
-  z-index: 99;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  padding: 30px 30px 0px 30px;
-  display: flex;
-  flex-direction: column;
-}
-
-.sidenav ul {
-  height: 100vh;
-  font-size: 2rem;
-  margin-left: clamp(1rem, 8vw, 48rem);
-  margin-top: clamp(1rem, 6vw, 8rem);
-  color: var(--color-primary);
-}
-
-.sidenav ul:hover > li {
-  opacity: 0.3;
-}
-.sidenav ul:hover > li:hover {
-  opacity: 1;
-}
-
-.sidenav ul li {
-  padding: clamp(3rem, 8vw, 3.4rem) 0rem;
-}
-
-.sidenav ul li a {
-  font-size: 1.5rem;
+.sidenav__menu > img {
+  width: 26px;
+  height: 26px;
 }
 
 .sidenav__logo {
@@ -88,12 +44,32 @@
   color: var(--color-logo);
 }
 
-.sidenav__icon {
-  width: 26px;
-  height: 26px;
+.sidemenu__cart {
+  display: flex;
+  position: relative;
+  border: var(--border-main);
+  align-items: center;
+  border-radius: 25px;
+  padding: 5px 13px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  font-size: 12px;
+  gap: 10px;
 }
 
-.sidenav__iconbubble {
+.sidemenu__cart img {
+  width: 15px;
+  height: auto;
+  cursor: pointer;
+}
+
+.sidemenu__cart p {
+  cursor: pointer;
+}
+
+.sidemenu__iconbubble {
   position: absolute;
   right: 0;
   top: -7px;
@@ -114,11 +90,50 @@
   -o-border-radius: 50%;
 }
 
-@media screen and (min-width: 768px) {
-  .sidenav ul li a {
-    font-size: 1.7rem;
-  }
+.sidenav__ul {
+  flex: 1;
+  margin-top: 10vh;
+  transform: translateY(-5%);
+}
 
+.sidenav__ul li {
+  border: 1px solid transparent;
+}
+
+.sidenav__ul li a {
+  padding: 16px 12px;
+  margin: 0px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+}
+
+.sidenav__ul li:hover {
+  background-color: var(--color-bg-grey);
+  border-radius: 10px;
+  border: var(--border-main);
+}
+.sidenav__ul li:active {
+  background-color: var(--color-bg-darkgrey);
+  border-radius: 10px;
+  border: var(--border-main);
+}
+
+.sidenav__ul li:not(:last-child) {
+  margin-bottom: 45px;
+}
+
+.sidemenu__icon {
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.sidemenu__icon:hover {
+  background: var(--color-bg-grey);
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
   .sidenav {
     padding: 60px 60px 0 60px;
     gap: 25px;
@@ -127,43 +142,61 @@
     font-size: 28px;
   }
 
-  .sidenav__cart {
+  .sidemenu__cart {
     font-size: 16px;
     padding: 7px 20px;
     gap: 40px;
   }
-  .sidenav__cart img {
+  .sidemenu__cart img {
     width: 19px;
     height: auto;
   }
-  .sidenav__icon {
-    width: 44px;
-    height: 44px;
-    margin-left: -4px;
-    margin-top: 2px;
-  }
-  .sidenav__iconbubble {
+  .sidemenu__iconbubble {
     right: 3px;
     top: -9px;
     width: 22px;
     height: 22px;
     font-size: 10px;
   }
+
+  .sidenav__menu > img {
+    width: 44px;
+    height: 44px;
+    margin-left: -4px;
+    margin-top: 2px;
+  }
+
+  .sidenav__ul li a {
+    padding: 18px 14px;
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  .sidenav__cart {
+  .sidemenu__cart {
     font-size: 18px;
     padding: 9px 22px;
   }
 
-  .sidenav__cart img {
+  .sidemenu__cart img {
     width: 20px;
   }
-  .sidenav__iconbubble {
+
+  .sidemenu__iconbubble {
     top: -9px;
     width: 25px;
     height: 25px;
     font-size: 12px;
+  }
+
+  .sidenav__ul li a {
+    padding: 20px 16px;
+    font-size: 1.375rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sidenav {
+    display: none;
   }
 }

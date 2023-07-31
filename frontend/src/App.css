@@ -4,27 +4,32 @@
   font-family: "TTNorms";
   src: local("TTNorms"), url("./fonts/TTNorms-Regular.otf") format("truetype");
   font-weight: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "TTNorms";
   src: local("TTNorms"), url("./fonts/TTNorms-Bold.otf") format("truetype");
   font-weight: bold;
+  font-display: swap;
 }
 @font-face {
   font-family: "TTNorms";
   src: local("TTNorms"), url("./fonts/TTNorms-Light.otf") format("truetype");
   font-weight: 200;
+  font-display: swap;
 }
 @font-face {
   font-family: "TTNorms";
   src: local("TTNorms"), url("./fonts/TTNorms-Medium.otf") format("truetype");
   font-weight: 500;
+  font-display: swap;
 }
 
 :root {
   --color-bg: #eee9e3;
   --color-bg-white: #ebebeb;
   --color-bg-grey: #e2e2e2;
+  --color-bg-darkgrey: #dbdbdb;
   --color-primary: #524d4b;
   --color-primary-dark: #413e3c;
   --border-main: 1px solid rgb(120, 120, 120);
@@ -52,6 +57,7 @@ a {
   outline: none;
   background: transparent;
 }
+
 a:hover,
 a:link,
 a:active,
@@ -69,6 +75,7 @@ li {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow: auto;
 }
 
 main {

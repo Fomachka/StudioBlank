@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from "./ContactPage.module.css";
-import { contactImage } from "../../assets/";
+import { contactImage, contactImageWebp } from "../../assets/";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+
 const ContactPage = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -59,7 +60,13 @@ const ContactPage = () => {
             </div>
             <div className={styles.contact__formcol2}>
               <label htmlFor="lname">Last Name</label>
-              <input required type="text" id="lname" name="lastName" placeholder="Last Name..." />
+              <input
+                required
+                type="text"
+                id="lname"
+                name="lastName"
+                placeholder="Last Name..."
+              />
             </div>
           </div>
           <label htmlFor="email">Email</label>
@@ -78,8 +85,16 @@ const ContactPage = () => {
           SEND EMAIL
         </button>
       </div>
-      <div className={styles.contact__img}>
-        <img src={contactImage} alt="serum bottle with a logo name below" />
+      <div>
+        <picture className={styles.contact__img}>
+          <source type="image/webp" srcSet={`${contactImageWebp} 1920w`} />
+          <img
+            src={contactImage}
+            alt="serum bottle with a logo name below"
+            width={1472}
+            height={1512}
+          />
+        </picture>
       </div>
     </main>
   );

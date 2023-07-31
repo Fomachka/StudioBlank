@@ -5,7 +5,8 @@
 
 .about__bgimage {
   width: 100%;
-  min-height: 600px;
+  min-height: 1000px;
+  height: auto;
   object-fit: cover;
   border: var(--border-main);
   border-radius: 20px;
@@ -92,6 +93,10 @@
   }
   .about__creamimage {
     top: 40%;
+  }
+
+  .about__bgimage {
+    width: 100%;
   }
 }
 

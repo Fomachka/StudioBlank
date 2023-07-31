@@ -28,6 +28,8 @@ const SingleProduct = ({ productInfo }) => {
             alt={productName}
             style={productColor && { backgroundColor: productColor }}
             className={styles.storepage__productimage}
+            width={278}
+            height={809}
           />
         </div>
       </Link>
