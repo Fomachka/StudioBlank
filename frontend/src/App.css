@@ -4,25 +4,25 @@
   font-family: "TTNorms";
   src: local("TTNorms"), url("./fonts/TTNorms-Regular.otf") format("truetype");
   font-weight: normal;
-  font-display: swap;
+  font-display: fallback;
 }
 @font-face {
   font-family: "TTNorms";
   src: local("TTNorms"), url("./fonts/TTNorms-Bold.otf") format("truetype");
   font-weight: bold;
-  font-display: swap;
+  font-display: fallback;
 }
 @font-face {
   font-family: "TTNorms";
   src: local("TTNorms"), url("./fonts/TTNorms-Light.otf") format("truetype");
   font-weight: 200;
-  font-display: swap;
+  font-display: fallback;
 }
 @font-face {
   font-family: "TTNorms";
   src: local("TTNorms"), url("./fonts/TTNorms-Medium.otf") format("truetype");
   font-weight: 500;
-  font-display: swap;
+  font-display: fallback;
 }
 
 :root {
