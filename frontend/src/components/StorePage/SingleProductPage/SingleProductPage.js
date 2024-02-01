@@ -10,7 +10,8 @@ const SingleProductPage = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const state = location.state;
-  const { productName, productPrice, productImage, productColor, productType } = state.attributes;
+  const { productName, productPrice, productImage, productColor, productType } =
+    state.attributes;
 
   const [currentQuantity, setCurrentQuantity] = useState(1);
 
@@ -40,7 +41,10 @@ const SingleProductPage = () => {
         borderRadius: "10px",
       },
       icon: "✅",
+      duration: 1000,
     });
+    setTimeout(() => toast.remove(), 1000);
+
     setCurrentQuantity(1);
   };
 
@@ -52,7 +56,9 @@ const SingleProductPage = () => {
         style={productColor && { backgroundColor: productColor }}
       >
         <img
-          className={`${styles.single__image} ${productType === "cream" && styles.single__cream}`}
+          className={`${styles.single__image} ${
+            productType === "cream" && styles.single__cream
+          }`}
           src={productImage.data.attributes.url}
           alt={productName}
         />
@@ -90,7 +96,11 @@ const SingleProductPage = () => {
           ADD TO CART
         </button>
       </div>
-      <Toaster position="top-center" containerClassName={styles.single__toaster} gutter={24} />
+      <Toaster
+        position="top-center"
+        containerClassName={styles.single__toaster}
+        gutter={24}
+      />
     </main>
   );
 };
