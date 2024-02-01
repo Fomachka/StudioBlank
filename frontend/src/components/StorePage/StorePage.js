@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./StorePage.module.css";
 import Pagination from "./Pagination/Pagination";
 import axios from "axios";
@@ -10,6 +10,7 @@ import {
   applyImage2SmallWebp,
   applyImage2Webp,
 } from "../../assets";
+import { useOutsideClick } from "../../util/clickOutside";
 
 const StorePage = () => {
   const [products, setProducts] = useState([]);
@@ -19,12 +20,17 @@ const StorePage = () => {
   const [filter, setFilter] = useState("all products");
   const [filteredArr, setFilteredArr] = useState([]);
   const [loading, setLoading] = useState(false);
+  const ref = useRef();
 
   const indexOfLastPost = currentPage * productsPerPage;
   const indexOfFirstPost = indexOfLastPost - productsPerPage;
   const currentProducts = products.slice(indexOfFirstPost, indexOfLastPost);
   const filteredProducts =
     filteredArr && filteredArr.slice(indexOfFirstPost, indexOfLastPost);
+
+  useOutsideClick(ref.current, () => {
+    setDropdown(false);
+  });
 
   const handleFilter = (event) => {
     const currentFilter = event.target.innerText.toLowerCase();
@@ -43,6 +49,7 @@ const StorePage = () => {
       setFilter(currentFilter);
       setFilteredArr(filteredArr);
     }
+    setDropdown((prev) => !prev);
   };
 
   useEffect(() => {
@@ -63,12 +70,12 @@ const StorePage = () => {
         setLoading(false);
       }
     };
+
     fetchData();
   }, []);
 
   return (
     <main className={styles.storepage}>
-      {/* <img src={applyImage2} alt="applying serum" width={511} height={487} /> */}
       <ImageWebPConverter
         className={applyImage2}
         src={applyImage2Webp}
@@ -81,7 +88,7 @@ const StorePage = () => {
       />
       <div className={styles.storepage__filter}>
         <p id={styles.storepage__filterp}>FILTER</p>
-        <div className={styles.storepage__dropdown}>
+        <div className={styles.storepage__dropdown} ref={ref}>
           <button
             onClick={() => setDropdown((prev) => !prev)}
             className={styles.storepage__dropbtn}
