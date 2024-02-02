@@ -9,27 +9,21 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const location = useLocation();
   const [active, setActive] = useState(location?.pathname || "/");
-
   useEffect(() => {
     handleActiveNav(location.pathname);
   }, [location.pathname]);
-
   const handleActiveNav = (path) => {
     setActive(path);
   };
-
   const cart = useSelector((state) => state.cart);
-
   const totalCartItems = () => {
     let total = 0;
     cart.forEach((item) => {
       total += item.quantity;
     });
-
     if (total > 99) {
       return "99+";
     }
-
     return total;
   };
   return (
