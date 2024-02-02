@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link
               to="/"
               onClick={() => setActive("/")}
-              className={active === "/" && styles.navigation__active}
+              className={active === "/" ? styles.navigation__active : undefined}
             >
               Home
             </Link>
@@ -52,7 +52,9 @@ const Navbar = () => {
             <Link
               to="/store"
               onClick={() => setActive(location.pathname)}
-              className={active?.includes("store") && styles.navigation__active}
+              className={
+                active?.includes("store") ? styles.navigation__active : undefined
+              }
             >
               Store
             </Link>
@@ -61,7 +63,9 @@ const Navbar = () => {
             <Link
               to="/about"
               onClick={() => setActive(location.pathname)}
-              className={active?.includes("about") && styles.navigation__active}
+              className={
+                active?.includes("about") ? styles.navigation__active : undefined
+              }
             >
               About
             </Link>
@@ -70,7 +74,9 @@ const Navbar = () => {
             <Link
               to="/contact"
               onClick={() => setActive(location.pathname)}
-              className={active?.includes("contact") && styles.navigation__active}
+              className={
+                active?.includes("contact") ? styles.navigation__active : undefined
+              }
             >
               Contact Us
             </Link>
