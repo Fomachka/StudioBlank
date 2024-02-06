@@ -21,7 +21,7 @@ const SuccessPage = () => {
     <main className={styles.success}>
       <div>
         <p>THANK YOU FOR YOUR PURCHASE!</p>
-        <p>We hope to see you again soon</p>
+        <p>We hope to see you again soon.</p>
       </div>
       <button onClick={() => navigate("/")}>BACK HOME</button>
       <Toaster

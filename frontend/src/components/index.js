@@ -8,6 +8,7 @@ import SingleProductPage from "./StorePage/SingleProductPage/SingleProductPage";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import SuccessPage from "./SuccessPage/SuccessPage";
 import SuccessForm from "./SuccessPage/SuccessForm";
+import CancelPage from "./CancelPage/CancelPage";
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   ErrorPage,
   SuccessPage,
   SuccessForm,
+  CancelPage,
 };

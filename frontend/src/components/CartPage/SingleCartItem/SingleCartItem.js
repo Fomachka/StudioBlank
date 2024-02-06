@@ -6,14 +6,17 @@ import { useDispatch } from "react-redux";
 
 const SingleCartItem = ({ productInfo }) => {
   const dispatch = useDispatch();
-  const image = productInfo.attributes.productImage.data.attributes.url;
+  const image = productInfo.attributes.productImage.url;
 
   const { productColor, productType, productName, productPrice } = productInfo.attributes;
 
   return (
     <li>
       <div className={styles.cartpage__container}>
-        <div className={styles.cartpage__imagediv} style={{ backgroundColor: productColor }}>
+        <div
+          className={styles.cartpage__imagediv}
+          style={{ backgroundColor: productColor }}
+        >
           <img
             className={`${
               productType === "cream" ? styles.cartpage__cream : styles.cartpage__serum

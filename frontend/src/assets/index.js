@@ -7,6 +7,7 @@ import leftArrow from "./icons/leftArrow.svg";
 import checkMark from "./icons/checkmarkIcon.svg";
 import warningIcon from "./icons/warningIcon.svg";
 import deleteIcon from "./icons/deleteIcon.svg";
+import backArrow from "./icons/backArrow.svg";
 
 import womanImage from "./images/womanImage.png";
 import serumsImage from "./images/serumsImage.png";
@@ -53,6 +54,7 @@ export {
   checkMark,
   warningIcon,
   deleteIcon,
+  backArrow,
   aboutMeSmall,
   aboutMeMedium,
   aboutMeBig,

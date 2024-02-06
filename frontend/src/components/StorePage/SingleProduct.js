@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./StorePage.module.css";
 import { Link } from "react-router-dom";
-
 const SingleProduct = ({ productInfo }) => {
   const {
     productName,
@@ -24,7 +23,7 @@ const SingleProduct = ({ productInfo }) => {
           style={productColor && { backgroundColor: productColor }}
         >
           <img
-            src={productImage.data.attributes.url}
+            src={productImage.url}
             alt={productName}
             style={productColor && { backgroundColor: productColor }}
             className={styles.storepage__productimage}

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import styles from "./SingleProductPage.module.css";
-import { useLocation } from "react-router-dom";
-import { checkMark } from "../../../assets/";
+import { useLocation, useNavigate } from "react-router-dom";
+import { checkMark, backArrow } from "../../../assets/";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/cartSlice";
 import toast, { Toaster } from "react-hot-toast";
 
 const SingleProductPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const state = location.state;
   const { productName, productPrice, productImage, productColor, productType } =
@@ -50,6 +51,9 @@ const SingleProductPage = () => {
 
   return (
     <main className={styles.single}>
+      <div className={styles.single__backarrow}>
+        <img src={backArrow} alt="navigation back" onClick={() => navigate(-1)} />
+      </div>
       <h2>{productName}</h2>
       <div
         className={styles.single__imagecontainer}
@@ -59,7 +63,7 @@ const SingleProductPage = () => {
           className={`${styles.single__image} ${
             productType === "cream" && styles.single__cream
           }`}
-          src={productImage.data.attributes.url}
+          src={productImage.url}
           alt={productName}
         />
         <p>{productType === "cream" ? "200ml" : "150ml"}</p>

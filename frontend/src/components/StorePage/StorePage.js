@@ -11,6 +11,7 @@ import {
   applyImage2Webp,
 } from "../../assets";
 import { useOutsideClick } from "../../util/clickOutside";
+import productsData from "../../util/products";
 
 const StorePage = () => {
   const [products, setProducts] = useState([]);
@@ -45,7 +46,7 @@ const StorePage = () => {
       setFilter("all products");
       setFilteredArr([]);
     } else {
-      setProductsPerPage(3);
+      setProductsPerPage(6);
       setFilter(currentFilter);
       setFilteredArr(filteredArr);
     }
@@ -53,25 +54,13 @@ const StorePage = () => {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const response = await axios.get(
-          process.env.REACT_APP_API_URL + "/products?populate=*",
-          {
-            headers: {
-              Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
-            },
-          }
-        );
-        setProducts(response.data.data);
-        setLoading(false);
-      } catch (error) {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
+    try {
+      setLoading(true);
+      setProducts([...productsData]);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
   }, []);
 
   return (
@@ -113,7 +102,7 @@ const StorePage = () => {
       />
       <Pagination
         productsPerPage={productsPerPage}
-        totalProducts={filteredArr.length || products.length}
+        totalProducts={filteredArr?.length || products?.length}
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
       />

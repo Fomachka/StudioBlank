@@ -22,6 +22,8 @@
 }
 .success > button {
   width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
   color: var(--color-white);
   background-color: var(--color-primary);
   text-align: center;
@@ -63,6 +65,7 @@
 
   .success > button {
     font-size: 18px;
+    max-width: 700px;
   }
 }
 
@@ -88,13 +91,14 @@
 
   .success > button {
     font-size: 20px;
+    max-width: 760px;
   }
 }
 @media screen and (min-width: 1920px) {
   .success {
     margin-top: 70px;
     gap: 90px;
-    max-width: 1100px;
+    max-width: 1160px;
   }
   .success p:first-child {
     font-size: 64px;
@@ -107,5 +111,6 @@
 
   .success > button {
     font-size: 22px;
+    max-width: 100%;
   }
 }

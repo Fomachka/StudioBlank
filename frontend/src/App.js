@@ -10,6 +10,7 @@ import {
   ErrorPage,
   SuccessPage,
   SuccessForm,
+  CancelPage,
 } from "./components/index";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/success",
         element: <SuccessPage />,
+      },
+      {
+        path: "/cancel",
+        element: <CancelPage />,
       },
       {
         path: "/submitted",

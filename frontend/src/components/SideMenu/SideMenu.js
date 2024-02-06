@@ -8,7 +8,7 @@ const SideMenu = ({ setToggleMenu }) => {
   const cart = useSelector((state) => state.cart);
 
   const handleToggle = () => {
-    setToggleMenu((prev) => !prev);
+    setToggleMenu(false);
   };
 
   const totalCartItems = () => {

@@ -23,9 +23,11 @@
 
 .page__active {
   background-color: var(--color-primary);
+  cursor: pointer;
 }
 .page__inactive {
   background-color: rgb(209, 209, 209);
+  cursor: pointer;
 }
 
 .page__inactive > a {

@@ -17,6 +17,7 @@ const SuccessPage = () => {
     });
     setTimeout(() => toast.remove(), 1000);
   }, []);
+
   return (
     <main className={styles.success}>
       <div>

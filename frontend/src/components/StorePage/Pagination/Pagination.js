@@ -9,8 +9,8 @@ const Pagination = ({ productsPerPage, totalProducts, setCurrentPage, currentPag
   if (Math.ceil(totalProducts / productsPerPage) <= 1) {
     pageNumbers.push(1);
   } else {
-    for (let i = 1; Math.ceil(i <= totalProducts / productsPerPage); i++) {
-      pageNumbers.push(i);
+    for (let i = 0; Math.ceil(i < totalProducts / productsPerPage); i++) {
+      pageNumbers.push(i + 1);
     }
   }
 
@@ -29,7 +29,11 @@ const Pagination = ({ productsPerPage, totalProducts, setCurrentPage, currentPag
     <nav>
       <ul className={styles.pagination}>
         <li onClick={() => setPage(currentPage - 1)}>
-          <img src={leftArrow} alt="left arrow icon" className={styles.pagination__icons} />
+          <img
+            src={leftArrow}
+            alt="left arrow icon"
+            className={styles.pagination__icons}
+          />
         </li>
         {pageNumbers.map((number) => (
           <li
@@ -37,14 +41,17 @@ const Pagination = ({ productsPerPage, totalProducts, setCurrentPage, currentPag
             className={`${styles.page} ${
               currentPage === number ? styles.page__active : styles.page__inactive
             }`}
+            onClick={() => setCurrentPage(number)}
           >
-            <Link onClick={() => setCurrentPage(number)} to="#">
-              {number}
-            </Link>
+            <Link to="#">{number}</Link>
           </li>
         ))}
         <li onClick={() => setPage(currentPage + 1)}>
-          <img src={rightArrow} alt="right arrow icon" className={styles.pagination__icons} />
+          <img
+            src={rightArrow}
+            alt="right arrow icon"
+            className={styles.pagination__icons}
+          />
         </li>
       </ul>
     </nav>
