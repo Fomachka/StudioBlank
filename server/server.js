@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://studio-blank.vercel.app",
   })
 );
 app.use(express.static("public"));
