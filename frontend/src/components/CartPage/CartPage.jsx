@@ -11,7 +11,7 @@ const CartPage = () => {
 
   const handlePayment = async () => {
     try {
-      await fetch("http://localhost:4000/checkout", {
+      await fetch("https://stripe-backend-one.vercel.app/checkout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
