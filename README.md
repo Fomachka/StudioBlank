@@ -37,7 +37,7 @@ To get a local copy up and running follow these simple steps.
 ### Installation
 
 1. Clone the repo
-git clone ```https://github.com/Fomachka/Studioblank.git```
+git clone ```https://github.com/Fomachka/StudioBlank.git```
 
 2. Install NPM packages
 ```npm install```
