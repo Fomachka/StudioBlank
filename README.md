@@ -21,7 +21,7 @@ Studioblank is a web application built with React.js, Redux and Express.js. It i
 
 ## Technologies Used
 
-- **Frontend:** React.js, HTML, CSS, Redux Toolkit
+- **Frontend:** React.js, HTML, CSS, Redux
 - **Backend:** Express.js, Stripe(payment)
 - **Deployment:** Vercel
 
