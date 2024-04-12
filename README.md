@@ -1,5 +1,5 @@
 # StudioBlank
-![2024-04-11 15 11 55](https://github.com/Fomachka/StudioBlank/assets/47694895/2cf59504-f67f-4eca-a8e1-38305c869463)
+![2024-04-12 10 16 03](https://github.com/Fomachka/StudioBlank/assets/47694895/672afe8f-472a-4c81-a176-0ede1c5cdfc3)
 
 
 Studioblank is a web application built with React.js, Redux and Express.js. It is simple shopping platform with all the essential functionalities such as shopping cart, inventory management and ability to purchase goods. It provides a user-friendly interface for customers to browse products, compare options, and make secure purchases with ease.
